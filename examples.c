@@ -1,5 +1,5 @@
 
-#include "test.h"
+#include "examples.h"
 #include "ST7796S_gui.h"
 #include "XPT2046_touch.h"
 #include "pic.h"
@@ -8,19 +8,6 @@
 // It is used in Touch_test() module for sprintf()
 #include <stdio.h>
 
-// Set SPI speed to a specific prescaler
-void SPI_SetPrescaler(uint32_t prescaler)
-{
-    __HAL_SPI_DISABLE(&hspi2);  // Disable SPI before changing settings
-
-    // Clear old prescaler bits
-    hspi2.Instance->CR1 &= ~SPI_CR1_BR;
-
-    // Set new prescaler
-    hspi2.Instance->CR1 |= prescaler;
-
-    __HAL_SPI_ENABLE(&hspi2);   // Re-enable SPI
-}
 
 //========================variable==========================//
 uint16_t ColorTab[5]={RED,GREEN,BLUE,YELLOW,BRED};
@@ -262,10 +249,10 @@ void Touch_Test(void)
 	uint16_t x_t, y_t;
 	while(1){
 		if(XPT2046_Touch()){
-			SPI_SetPrescaler(SPI_BAUDRATEPRESCALER_16);
 			XPT2046_GetXY(&x_t, &y_t, 0);
 			uint16_t z = XPT2046_GetZ();
-			SPI_SetPrescaler(SPI_BAUDRATEPRESCALER_2);
+
+			// Checks if it was valid touch
 			if((z<Z_THRESHOLD)&(z>0)){
 				gui_circle(x_t,y_t,MAGENTA,2,1);
 				LCD_Fill(0,0,lcddev.width,20,GREEN);
@@ -275,6 +262,7 @@ void Touch_Test(void)
 		}
 	}
 }
+
 
 
 
