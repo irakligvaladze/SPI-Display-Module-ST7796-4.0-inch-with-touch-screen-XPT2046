@@ -1,7 +1,7 @@
 # SPI-Display-Module-ST7796-4.0-inch-with-touch-screen-XPT2046
 
 Modular C library for the **ST7796 4.0” SPI LCD** with **XPT2046 touch**, providing portable drawing and touch functions. The library is configurable via header files for a specific MCU and includes ready-to-run example projects.
-
+For more details about the display, please visit https://www.lcdwiki.com/4.0inch_SPI_Module_ST7796
 ---
 ![MSP4021-002](https://github.com/user-attachments/assets/e92da91c-1989-4123-ba69-333680145c98)
 
