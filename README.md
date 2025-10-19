@@ -14,10 +14,9 @@ For more details about the display, please visit https://www.lcdwiki.com/4.0inch
 ---
 
 ## MCU Adaptation
+![MSP4021-002](https://github.com/user-attachments/assets/e92da91c-1989-4123-ba69-333680145c98)
 
 To adapt this library to your specific microcontroller:
-
-![MSP4021-002](https://github.com/user-attachments/assets/e92da91c-1989-4123-ba69-333680145c98)
 
 1. **Display (ST7796) Porting**  
    - Modify `ST7796S_port.h` for your MCU's GPIO and SPI configuration.  
@@ -35,7 +34,7 @@ To adapt this library to your specific microcontroller:
      const float b0y = -0.26f;
      const float b1y = 512.8f;
      ```
-   - Adjust `#define Z_THRESHOLD 10000` in `XPT2046_touch.c` for valid touch detection.
+   - If needed adjust `#define Z_THRESHOLD 10000` in `XPT2046_touch.c` for valid touch detection.
 
 ---
 
