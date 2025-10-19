@@ -3,6 +3,7 @@
 Modular C library for the **ST7796 4.0” SPI LCD** with **XPT2046 touch**, providing portable drawing and touch functions. The library is configurable via header files for a specific MCU and includes ready-to-run example projects.
 
 ---
+![MSP4021-002](https://github.com/user-attachments/assets/e92da91c-1989-4123-ba69-333680145c98)
 
 ## Features
 - Portable C library for STM32 and other microcontrollers.
