@@ -3,7 +3,6 @@
 Modular C library for the **ST7796 4.0” SPI LCD** with **XPT2046 touch**, providing portable drawing and touch functions. The library is configurable via header files for a specific MCU and includes ready-to-run example projects.
 For more details about the display, please visit https://www.lcdwiki.com/4.0inch_SPI_Module_ST7796
 ---
-![MSP4021-002](https://github.com/user-attachments/assets/e92da91c-1989-4123-ba69-333680145c98)
 
 ## Features
 - Portable C library for STM32 and other microcontrollers.
@@ -17,6 +16,8 @@ For more details about the display, please visit https://www.lcdwiki.com/4.0inch
 ## MCU Adaptation
 
 To adapt this library to your specific microcontroller:
+
+![MSP4021-002](https://github.com/user-attachments/assets/e92da91c-1989-4123-ba69-333680145c98)
 
 1. **Display (ST7796) Porting**  
    - Modify `ST7796S_port.h` for your MCU's GPIO and SPI configuration.  
